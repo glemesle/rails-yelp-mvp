@@ -1,0 +1,16 @@
+<div class="container my-3">
+  <div class="row">
+    <div class="col">
+      <h1>Create a new restaurant</h1>
+
+      <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name %>
+        <%= f.input :category, collection: Restaurant::CATEGORIES %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.submit class: 'btn btn-primary' %><%= link_to "Cancel", restaurants_path, class: 'btn btn-primary ml-3' %>
+
+      <% end %>
+    </div>
+  </div>
+</div>
